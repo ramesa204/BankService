@@ -1,4 +1,4 @@
-package com.ram.data;
+package com.ram.bank.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class User {
     private int id;
     private String name;
-    private Long accountnumber;
+    private Long accountNumber;
     private double balance;
     private boolean accountStatus;
 }

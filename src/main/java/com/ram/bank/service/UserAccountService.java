@@ -1,6 +1,6 @@
-package com.ram.service;
+package com.ram.bank.service;
 
-import com.ram.data.User;
+import com.ram.bank.data.User;
 
 import java.util.List;
 

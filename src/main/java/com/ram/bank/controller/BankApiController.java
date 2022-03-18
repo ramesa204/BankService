@@ -1,7 +1,7 @@
-package com.ram.controller;
+package com.ram.bank.controller;
 
-import com.ram.data.User;
-import com.ram.service.UserAccountService;
+import com.ram.bank.data.User;
+import com.ram.bank.service.UserAccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +17,7 @@ public class BankApiController {
 
     @GetMapping("/users")
     public List<User> getAllUsers(){
-        log.info("Started fetching the users");
+        log.info("Started fetching the users data");
         return userAccountService.getUserData();
     }
 

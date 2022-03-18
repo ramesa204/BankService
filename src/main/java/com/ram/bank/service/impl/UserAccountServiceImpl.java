@@ -1,7 +1,7 @@
-package com.ram.service.impl;
+package com.ram.bank.service.impl;
 
-import com.ram.data.User;
-import com.ram.service.UserAccountService;
+import com.ram.bank.data.User;
+import com.ram.bank.service.UserAccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ public class UserAccountServiceImpl implements UserAccountService {
     @Override
     public List<User> getUserData() {
         List<User> userList = createUserData();
-        log.info("{} users are pulled ",userList.size());
+        log.info("{} users are retrieved ",userList.size());
         return createUserData();
     }
 

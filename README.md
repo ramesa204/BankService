@@ -1,2 +1,2 @@
 # BankService
-Provides Bank Service
+Sample Project to understand the RESTful Webservice

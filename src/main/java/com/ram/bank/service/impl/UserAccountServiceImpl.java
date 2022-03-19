@@ -32,13 +32,13 @@ public class UserAccountServiceImpl implements UserAccountService {
     }
 
     @Override
-    public User getUserByName(String name) {
-        log.info("Finding the user for name {}",name);
-        User retrievedUser = userRepository.findByName(name);
+    public User getUserByAccountNumber(Integer accountNumber) {
+        log.info("Finding the user for accountNumber {}",accountNumber);
+        User retrievedUser = userRepository.findByAccountNumber(accountNumber);
         if(retrievedUser!=null)
         log.info("User Fetched for id {} and name {}",retrievedUser.getId(),retrievedUser.getName());
         else
-            throw new UserNotFoundException("User is not found for given name "+name);
+            throw new UserNotFoundException("User is not found for given accountNumber "+accountNumber);
         return retrievedUser;
     }
 

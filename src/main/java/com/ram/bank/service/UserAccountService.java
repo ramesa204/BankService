@@ -10,5 +10,5 @@ public interface UserAccountService {
 
     User saveUser(User user);
 
-    User getUserByName(String name);
+    User getUserByAccountNumber(Integer accountNumber);
 }

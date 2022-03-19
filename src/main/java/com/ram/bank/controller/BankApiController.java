@@ -26,10 +26,10 @@ public class BankApiController {
         return userAccountService.saveUser(user);
     }
 
-    @GetMapping("/user/{name}")
-    public User getUserByName(@PathVariable String name) {
-        log.info("Started fetching the user for given name {}", name);
-        return userAccountService.getUserByName(name);
+    @GetMapping("/user/{accountNumber}")
+    public User getUserByName(@PathVariable Integer accountNumber) {
+        log.info("Started fetching the user for given accountNumber {}", accountNumber);
+        return userAccountService.getUserByAccountNumber(accountNumber);
     }
 
 

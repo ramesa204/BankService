@@ -7,4 +7,8 @@ import java.util.List;
 public interface UserAccountService {
 
     List<User> getUserData();
+
+    User saveUser(User user);
+
+    User getUserByName(String name);
 }

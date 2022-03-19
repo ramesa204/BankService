@@ -4,8 +4,7 @@ import com.ram.bank.data.User;
 import com.ram.bank.service.UserAccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @Slf4j
@@ -15,10 +14,22 @@ public class BankApiController {
     @Autowired
     UserAccountService userAccountService;
 
-    @GetMapping("/users")
+    @GetMapping("/user")
     public List<User> getAllUsers(){
         log.info("Started fetching the users data");
         return userAccountService.getUserData();
+    }
+
+    @PostMapping("/user")
+    public User persistTheUser(@RequestBody User user){
+        log.info("Started saving the user");
+        return userAccountService.saveUser(user);
+    }
+
+    @GetMapping("/user/{name}")
+    public User getUserByName(@PathVariable String name) {
+        log.info("Started fetching the user for given name {}", name);
+        return userAccountService.getUserByName(name);
     }
 
 
